@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cox's Bazar — World's Longest Natural Sea Beach | Official Tourist Portal</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
+  <meta name="description" content="Discover Cox's Bazar, Bangladesh — the world's longest unbroken natural sea beach (120 km). Explore Inani coral beach, Marine Drive safari, fresh seafood, luxury resorts, and customized trip itineraries.">
+  <meta name="keywords" content="Cox's Bazar, Bangladesh Tourism, Inani Beach, Marine Drive, Saint Martin Island, Sea Beach, Longest Beach">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Experience Cox's Bazar — The World's Longest Sea Beach">
+  <meta property="og:description" content="Plan your dream getaway to Cox's Bazar: 120km golden shoreline, thrilling Marine Drive, fresh seafood feast, and coral islands.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-text">Cox's Bazar</div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#destinations" class="nav-link">Destinations</a></li>
+        <li><a href="#activities" class="nav-link">Adventures</a></li>
+        <li><a href="#cuisine" class="nav-link">Seafood & Dining</a></li>
+        <li><a href="#itineraries" class="nav-link">Itineraries</a></li>
+        <li><a href="#stays" class="nav-link">Resorts</a></li>
+        <li><a href="#guide" class="nav-link">Travel & Safety</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Ambient Beach Sound Toggle -->
+        <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle ambient ocean waves">
+          <span>🌊</span> <span id="soundStatusText">Beach Vibe</span>
+        </button>
+
+        <a href="#destinations" class="btn btn-primary"><i class="fas fa-compass"></i> Explore</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawer" class="mobile-nav-drawer">
+    <button id="drawerClose" class="drawer-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <div class="logo-text" style="font-size: 1.5rem; margin-bottom: 10px;">Cox's Bazar</div>
+    <ul class="mobile-nav-links">
+      <li><a href="#destinations">🏖️ Destinations</a></li>
+      <li><a href="#activities">🏄 Adventures & Marine Drive</a></li>
+      <li><a href="#cuisine">🍤 Seafood & Food Guide</a></li>
+      <li><a href="#itineraries">🗓️ Suggested Itineraries</a></li>
+      <li><a href="#stays">🏨 Luxury Resorts & Stays</a></li>
+      <li><a href="#guide">🚆 How to Reach & Safety</a></li>
+      <li><a href="#gallery">📸 Photo Gallery</a></li>
+    </ul>
+    <a href="#destinations" class="btn btn-primary" style="width: 100%; margin-top: 20px; text-decoration: none;">Explore Cox's Bazar</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section with Multi-Photo Background Slider
+         ========================================================================== -->
+    <section id="home" class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" style="background-image: url('assets/images/favicon_hero.jpg');" data-title="Tropical Beach Umbrella"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/slider_sampan_calm.jpg');" data-title="Moon Boat on Turquoise Sea"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/slider_bd_flag.jpg');" data-title="Bangladesh Pride in the Waves"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/slider_fishing_boat.jpg');" data-title="Traditional Fishing in Coastal Surf"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/slider_beach_walk.jpg');" data-title="Dusk Reflection Beach Walk"></div>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="hero-slider-nav">
+        <button id="sliderPrevBtn" class="slider-arrow-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="sliderDots">
+          <span class="slider-dot active" data-index="0"></span>
+          <span class="slider-dot" data-index="1"></span>
+          <span class="slider-dot" data-index="2"></span>
+          <span class="slider-dot" data-index="3"></span>
+          <span class="slider-dot" data-index="4"></span>
+        </div>
+        <button id="sliderNextBtn" class="slider-arrow-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fas fa-certificate"></i> Bangladesh's Premier Coastal Wonder
+          </div>
+          <h1 class="hero-title">
+            Where the <span class="gradient-text">Endless Ocean</span> Meets Golden Sands
+          </h1>
+          <p class="hero-description">
+            Experience the world's longest unbroken natural sea beach (120 km), scenic Marine Drive along lush tropical hills, emerald coral waters, and mouth-watering seafood.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#destinations" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Coastlines</a>
+            <a href="#itineraries" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> Suggested Itineraries</a>
+          </div>
+
+          <!-- Live Weather & Beach Ticker Bar -->
+          <div class="hero-ticker-bar">
+            <div class="ticker-item">
+              <div class="ticker-icon"><i class="fas fa-clock"></i></div>
+              <div class="ticker-text">
+                <small>Local Time</small>
+                <strong id="liveTime">Loading BST...</strong>
+              </div>
+            </div>
+
+            <div class="ticker-item">
+              <div class="ticker-icon"><i class="fas fa-sun"></i></div>
+              <div class="ticker-text">
+                <small>Sunset Countdown</small>
+                <strong id="sunsetCountdown">Sunset in 2h 45m</strong>
+              </div>
+            </div>
+
+            <div class="ticker-item">
+              <div class="ticker-icon"><i class="fas fa-water"></i></div>
+              <div class="ticker-text">
+                <small>Tide Status</small>
+                <strong id="liveTide">Low Tide (Safe Swimming)</strong>
+              </div>
+            </div>
+
+            <div class="ticker-item">
+              <div class="ticker-icon"><i class="fas fa-flag"></i></div>
+              <div class="ticker-text">
+                <small>Beach Safety Flag</small>
+                <strong class="badge-green"><i class="fas fa-check-circle"></i> Green (Calm Waves)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Quick Stats Section
+         ========================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">120 KM</div>
+            <div class="stat-label">Longest Natural Sand Coast</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">80 KM</div>
+            <div class="stat-label">Iconic Marine Drive Highway</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">300+</div>
+            <div class="stat-label">Sunny Tropical Days / Year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Water Sports & Thrill Points</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About & History Section
+         ========================================================================== -->
+    <section id="history" class="section" style="background: linear-gradient(to right, rgba(15,23,42,0.95), rgba(15,23,42,0.85)), url('assets/images/slider_beach_walk.jpg') center/cover fixed; position: relative;">
+      <div class="container">
+        <div class="history-content-wrapper" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 40px; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <span class="section-badge" style="margin: 0 auto 20px;"><i class="fas fa-book-open"></i> The Legacy</span>
+          <h2 class="section-title">The Tale of <span>Cox's Bazar</span></h2>
+          <p class="panoramic-paragraph" style="color: var(--gray-300); font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+            Known as the tourism capital of Bangladesh, Cox's Bazar boasts the <strong>world's longest unbroken natural sea beach</strong> stretching over 120 kilometers along the shimmering Bay of Bengal. This majestic coastal town owes its name to <strong>Captain Hiram Cox</strong>, an officer of the British East India Company. In the late 18th century, Captain Cox was appointed to oversee the rehabilitation of refugees. He established a bustling local market (a "bazar"), and to honor his compassionate administration and legacy, the town was officially named "Cox's Bazar" in 1799. 
+          </p>
+          <p class="panoramic-paragraph" style="color: var(--gray-300); font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+            Today, its fame has transcended borders. From the stunning golden sands that meet turquoise waters, to the scenic Marine Drive flanked by lush green hills on one side and the roaring ocean on the other, the place has become an absolute paradise. Whether you are looking for thrilling water sports, mesmerizing sunsets, or the peaceful serenity of the ocean breeze, Cox's Bazar stands as a proud testament to natural beauty and historical resilience, beckoning millions of tourists every year to witness its undeniable charm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Destinations Section
+         ========================================================================== -->
+    <section id="destinations" class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-map-marked-alt"></i> Iconic Coastlines</span>
+          <h2 class="section-title">Discover <span>Cox's Bazar's</span> Top Spots</h2>
+          <p class="section-desc">From vibrant bustling sunset shores to secluded coral rock beaches and tropical coral islands.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Spots</button>
+          <button class="filter-btn" data-filter="main">Main City Beaches</button>
+          <button class="filter-btn" data-filter="scenic">Scenic Coast & Hills</button>
+          <button class="filter-btn" data-filter="islands">Coral Islands & Excursions</button>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="cards-grid">
+          <!-- Inani Beach -->
+          <article class="dest-card" data-category="scenic">
+            <div class="card-img-wrapper">
+              <img src="assets/images/inani_beach.jpg" alt="Inani Coral Beach" loading="lazy">
+              <span class="card-badge">Coral Wonder</span>
+              <span class="card-distance"><i class="fas fa-road"></i> 32 km from town</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Inani Beach</h3>
+              <p class="card-desc">Famous for natural green-mossy coral stone boulders, shallow crystal-clear turquoise waters, and tranquil sea breeze with fewer crowds.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-gem"></i> Coral Reefs</span>
+                <span class="card-tag"><i class="fas fa-camera"></i> Photography</span>
+                <span class="card-tag"><i class="fas fa-peace"></i> Quiet Zone</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-gem" style="color: #38bdf8;"></i> Natural Coral Stone Shore</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Marine Drive -->
+          <article class="dest-card" data-category="scenic">
+            <div class="card-img-wrapper">
+              <img src="assets/images/marine_drive.jpg" alt="Cox's Bazar Marine Drive" loading="lazy">
+              <span class="card-badge">World Class Drive</span>
+              <span class="card-distance"><i class="fas fa-route"></i> 80 km Scenic Route</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Marine Drive Highway</h3>
+              <p class="card-desc">The world's longest marine drive highway. Flanked by lush green towering hills on one side and the roaring Bay of Bengal on the other.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-car"></i> Open Jeep Safari</span>
+                <span class="card-tag"><i class="fas fa-mountain"></i> Hill Meets Ocean</span>
+                <span class="card-tag"><i class="fas fa-wind"></i> Sea Breeze</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-road" style="color: #f97316;"></i> 80 km Hill & Ocean Drive</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Saint Martin's Island -->
+          <article class="dest-card" data-category="islands">
+            <div class="card-img-wrapper">
+              <img src="assets/images/saint_martins.jpg" alt="Saint Martin Island" loading="lazy">
+              <span class="card-badge">Coral Paradise</span>
+              <span class="card-distance"><i class="fas fa-ship"></i> Cruise from Teknaf</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Saint Martin's Island</h3>
+              <p class="card-desc">Bangladesh's only coral island (Narikel Jinjira), surrounded by swaying coconut palms, live coral gardens, scuba diving, and fresh green coconuts.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-tree"></i> Coconut Palms</span>
+                <span class="card-tag"><i class="fas fa-swimmer"></i> Scuba & Snorkeling</span>
+                <span class="card-tag"><i class="fas fa-island-tropical"></i> Chera Dwip</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-water" style="color: #2dd4bf;"></i> Coral Reef Gardens</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Laboni Beach -->
+          <article class="dest-card" data-category="main">
+            <div class="card-img-wrapper">
+              <img src="assets/images/hero.jpg" alt="Laboni Beach Sunset" loading="lazy">
+              <span class="card-badge">City Center</span>
+              <span class="card-distance"><i class="fas fa-walking"></i> Central Cox's Bazar</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Laboni & Sugandha Beach</h3>
+              <p class="card-desc">The heartbeat of Cox's Bazar sea beach. Buzzing with vibrant evening beach lighting, horse rides, beach umbrella loungers, and lively street seafood stalls.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-umbrella-beach"></i> Beach Beds</span>
+                <span class="card-tag"><i class="fas fa-store"></i> Night Markets</span>
+                <span class="card-tag"><i class="fas fa-horse"></i> Horse Riding</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-sun" style="color: #f59e0b;"></i> Iconic Sunset & Strolls</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Himchari -->
+          <article class="dest-card" data-category="scenic">
+            <div class="card-img-wrapper">
+              <img src="assets/images/marine_drive.jpg" alt="Himchari Hills" loading="lazy">
+              <span class="card-badge">Hill Viewpoint</span>
+              <span class="card-distance"><i class="fas fa-road"></i> 18 km South</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Himchari National Park</h3>
+              <p class="card-desc">Climb the scenic hilltop stairs for a bird's-eye panoramic view of the infinite Bay of Bengal. Home to natural waterfalls and tropical forest trails.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-hiking"></i> Hilltop Viewpoint</span>
+                <span class="card-tag"><i class="fas fa-tint"></i> Natural Waterfall</span>
+                <span class="card-tag"><i class="fas fa-leaf"></i> Eco Trail</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-mountain" style="color: #10b981;"></i> Hilltop Sea Horizon</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maheshkhali & Sonadia -->
+          <article class="dest-card" data-category="islands">
+            <div class="card-img-wrapper">
+              <img src="assets/images/saint_martins.jpg" alt="Maheshkhali Island" loading="lazy">
+              <span class="card-badge">Cultural Island</span>
+              <span class="card-distance"><i class="fas fa-ship"></i> 20 min Speedboat</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Maheshkhali & Sonadia Island</h3>
+              <p class="card-desc">Visit the ancient hilltop Adinath Temple, Buddhist pagodas, mangrove forests, and red crab nesting sanctuaries on pristine Sonadia island.</p>
+              <div class="card-tags">
+                <span class="card-tag"><i class="fas fa-place-of-worship"></i> Adinath Temple</span>
+                <span class="card-tag"><i class="fas fa-water"></i> Mangrove Trails</span>
+                <span class="card-tag"><i class="fas fa-crab"></i> Red Crabs</span>
+              </div>
+              <div class="card-footer">
+                <span class="dest-highlight"><i class="fas fa-landmark" style="color: #38bdf8;"></i> Ancient Cultural Heritage</span>
+                <a href="#gallery" class="card-btn">View Photos <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Thrills & Activities Section
+         ========================================================================== -->
+    <section id="activities" class="section" style="background: rgba(10, 20, 35, 0.4);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-bolt"></i> Action & Adrenaline</span>
+          <h2 class="section-title">Exciting <span>Beach Adventures</span></h2>
+          <p class="section-desc">Get your pulse racing with water sports, aerial parasailing, and off-road open jeep rides on the coastline.</p>
+        </div>
+
+        <!-- Featured Marine Drive Banner -->
+        <div class="experience-banner">
+          <div class="exp-banner-img">
+            <img src="assets/images/parasailing.jpg" alt="Parasailing at Cox's Bazar" loading="lazy">
+          </div>
+          <div class="exp-banner-content">
+            <span class="card-badge" style="position: static; display: inline-block; margin-bottom: 12px;">Top Coastal Thrill</span>
+            <h3>Fly High Over the Bay of Bengal</h3>
+            <p>Soar 300+ feet in the sky on a thrilling parasailing adventure over the shimmering turquoise waves, safely towed by high-speed specialized powerboats.</p>
+            <ul class="exp-features">
+              <li><i class="fas fa-check-circle"></i> Certified international flight safety equipment</li>
+              <li><i class="fas fa-check-circle"></i> Single & Tandem dual panoramic flights</li>
+              <li><i class="fas fa-check-circle"></i> Bird's-eye views of the unbroken coastline</li>
+              <li><i class="fas fa-check-circle"></i> Operated along Kolatoli & Inani shores</li>
+            </ul>
+            <div style="display: inline-flex; align-items: center; gap: 8px; color: #2dd4bf; font-weight: 600; font-size: 0.95rem; background: rgba(13, 148, 136, 0.15); padding: 8px 16px; border-radius: var(--radius-full); border: 1px solid rgba(45, 212, 191, 0.3);">
+              <i class="fas fa-info-circle"></i> Operates daily during sunny morning and afternoon low tides
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Grid -->
+        <div class="activity-grid">
+          <div class="act-card">
+            <div class="act-icon"><i class="fas fa-truck-pickup"></i></div>
+            <h3 class="act-title">Open Jeep Safari</h3>
+            <p class="act-desc">Cruise the 80km Marine Drive with the ocean wind in your hair on an iconic retro open-top 4x4 Chander Gari.</p>
+            <div class="act-meta">
+              <span>Route: 80 km Marine Drive</span>
+              <span style="color: #38bdf8;">Iconic Road Trip</span>
+            </div>
+          </div>
+
+          <div class="act-card">
+            <div class="act-icon"><i class="fas fa-water"></i></div>
+            <h3 class="act-title">Surfing Lessons</h3>
+            <p class="act-desc">Learn from Bangladesh's champion surf clubs at Kolatoli. Consistent 3 to 6 ft waves perfect for beginner & intermediate surfers.</p>
+            <div class="act-meta">
+              <span>Location: Kolatoli Point</span>
+              <span style="color: #38bdf8;">Ideal Wave Swells</span>
+            </div>
+          </div>
+
+          <div class="act-card">
+            <div class="act-icon"><i class="fas fa-motorcycle"></i></div>
+            <h3 class="act-title">Beach Quad ATV Riding</h3>
+            <p class="act-desc">Drive heavy-duty four-wheel ATV quad bikes right across the wide sand stretches during low tide.</p>
+            <div class="act-meta">
+              <span>Terrain: Flat Firm Sand</span>
+              <span style="color: #38bdf8;">Low Tide Thrill</span>
+            </div>
+          </div>
+
+          <div class="act-card">
+            <div class="act-icon"><i class="fas fa-ship"></i></div>
+            <h3 class="act-title">Speedboat Wave Blasting</h3>
+            <p class="act-desc">Zip across sea crests with twin-engine speedboats slicing through the Bay of Bengal surf.</p>
+            <div class="act-meta">
+              <span>Zone: Bay of Bengal Surf</span>
+              <span style="color: #38bdf8;">High-Speed Ride</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Seafood & Culinary Guide
+         ========================================================================== -->
+    <section id="cuisine" class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-utensils"></i> Coastal Gourmet</span>
+          <h2 class="section-title">Taste of <span>Cox's Bazar</span></h2>
+          <p class="section-desc">Feast on freshly caught ocean delicacies, world-renowned Chittagonian spices, and signature local seafood.</p>
+        </div>
+
+        <div class="food-showcase">
+          <div class="food-media">
+            <img src="assets/images/seafood_feast.jpg" alt="Cox's Bazar Fresh Seafood Dinner" loading="lazy">
+            <div class="food-floating-badge">
+              <div class="food-badge-icon"><i class="fas fa-fish"></i></div>
+              <div>
+                <div class="food-badge-title">Fresh Catch Daily</div>
+                <div class="food-badge-sub">Direct from local fishing Sampans</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-items-list">
+            <div class="food-item-row">
+              <div class="food-emoji">🐟</div>
+              <div class="food-info">
+                <h4>Crispy Fried Rupchanda (Silver Pomfret)</h4>
+                <p>Marinated with mustard, turmeric, and local coastal chili paste, shallow-fried to golden perfection.</p>
+              </div>
+            </div>
+
+            <div class="food-item-row">
+              <div class="food-emoji">🦐</div>
+              <div class="food-info">
+                <h4>Grilled Jumbo Tiger Prawns</h4>
+                <p>Charcoal-grilled ocean prawns basted with garlic butter, lemon, and crushed coriander seeds.</p>
+              </div>
+            </div>
+
+            <div class="food-item-row">
+              <div class="food-emoji">🦀</div>
+              <div class="food-info">
+                <h4>Spicy Mud Crab Bhuna</h4>
+                <p>Rich and aromatic Chittagonian spicy crab curry slow-cooked with fresh onions, coconut milk, and ginger.</p>
+              </div>
+            </div>
+
+            <div class="food-item-row">
+              <div class="food-emoji">🥢</div>
+              <div class="food-info">
+                <h4>Famous Shutki Delicacies & Burmese Market</h4>
+                <p>Explore the famous *Shutki Mahal* for sun-dried sea fish and Burmese Market for handmade pearls, tamarind candy, and Rakhine handloom shawls.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Curated Travel Itineraries & Experience Guide
+         ========================================================================== -->
+    <section id="itineraries" class="section" style="background: radial-gradient(circle at 50% 50%, #0d1f38 0%, #050d18 100%);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-map-signs"></i> Curated Journeys</span>
+          <h2 class="section-title">Suggested <span>Travel Itineraries</span></h2>
+          <p class="section-desc">Handcrafted plans to help travelers experience the very best of Cox's Bazar's unbroken shores, scenic roads, and cultural sights.</p>
+        </div>
+
+        <!-- Itinerary Selection Tabs -->
+        <div class="itinerary-tabs">
+          <button class="itinerary-tab-btn active" data-itinerary="2day">
+            <i class="fas fa-sun"></i> 2-Day Weekend Coastal Escape
+          </button>
+          <button class="itinerary-tab-btn" data-itinerary="3day">
+            <i class="fas fa-road"></i> 3-Day Marine Drive & Thrills
+          </button>
+          <button class="itinerary-tab-btn" data-itinerary="5day">
+            <i class="fas fa-island-tropical"></i> 5-Day Grand Coral Exploration
+          </button>
+        </div>
+
+        <!-- Itinerary Content Boxes -->
+        <div class="itinerary-content-wrapper">
+          <!-- 2-Day Plan -->
+          <div class="itinerary-pane active" id="itin-2day">
+            <div class="itinerary-timeline">
+              <div class="itinerary-step">
+                <div class="step-marker">Day 1</div>
+                <div class="step-content">
+                  <h4>Arrival & Iconic Sunset at Laboni Beach</h4>
+                  <p>Arrive via the iconic Oyster Railway Station. Stroll the bustling Kolatoli & Laboni beaches, soak in the golden hour sunset over moon-shaped Sampan boats, and enjoy fresh fried Rupchanda fish for dinner at night beach stalls.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-train"></i> Oyster Station</span>
+                    <span><i class="fas fa-sun"></i> Sunset Watch</span>
+                    <span><i class="fas fa-utensils"></i> Street Seafood</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itinerary-step">
+                <div class="step-marker">Day 2</div>
+                <div class="step-content">
+                  <h4>Himchari Hilltop & Inani Coral Rocks</h4>
+                  <p>Climb the hilltop stairs of Himchari for a dramatic panoramic sea view and waterfall. Head south to Inani Beach to walk among ancient green-mossy coral boulders at low tide, returning for evening souvenir shopping at the Burmese Market.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-mountain"></i> Himchari View</span>
+                    <span><i class="fas fa-gem"></i> Inani Coral Stones</span>
+                    <span><i class="fas fa-shopping-bag"></i> Burmese Crafts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3-Day Plan -->
+          <div class="itinerary-pane" id="itin-3day">
+            <div class="itinerary-timeline">
+              <div class="itinerary-step">
+                <div class="step-marker">Day 1</div>
+                <div class="step-content">
+                  <h4>Ocean Awakening & Surfing at Kolatoli</h4>
+                  <p>Morning sea bath along Kolatoli beach with beginner surfing lessons from local surf masters. Afternoon relaxation under beach umbrellas and a twilight walk watching local fishermen pull their nets.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-water"></i> Surfing Waves</span>
+                    <span><i class="fas fa-ship"></i> Sampan Fleet</span>
+                    <span><i class="fas fa-fish"></i> Grilled Lobster</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itinerary-step">
+                <div class="step-marker">Day 2</div>
+                <div class="step-content">
+                  <h4>80km Marine Drive Open-Jeep Safari & Parasailing</h4>
+                  <p>Rent an open 4x4 Jeep and cruise the 80km Marine Drive between dramatic mountains and crashing waves. Experience thrilling tandem parasailing high above the ocean, with a sunset coffee stop at an oceanfront cafe.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-truck-pickup"></i> Open Jeep Cruise</span>
+                    <span><i class="fas fa-paper-plane"></i> Aerial Parasailing</span>
+                    <span><i class="fas fa-coffee"></i> Marine Drive Cafe</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itinerary-step">
+                <div class="step-marker">Day 3</div>
+                <div class="step-content">
+                  <h4>Maheshkhali Island & Shutki Heritage</h4>
+                  <p>Catch a morning speedboat across the channel to Maheshkhali Island. Visit the ancient Adinath Temple on Mainak Hill, Buddhist pagodas, and stop by the famous Shutki Mahal dried fish bazaar before heading home.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-place-of-worship"></i> Adinath Temple</span>
+                    <span><i class="fas fa-ship"></i> Speedboat Channel</span>
+                    <span><i class="fas fa-fish"></i> Shutki Mahal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5-Day Plan -->
+          <div class="itinerary-pane" id="itin-5day">
+            <div class="itinerary-timeline">
+              <div class="itinerary-step">
+                <div class="step-marker">Days 1-2</div>
+                <div class="step-content">
+                  <h4>Cox's Coastline, Marine Drive & Water Sports</h4>
+                  <p>Explore the best of Cox's Bazar main beaches, Himchari waterfalls, and Inani's coral boulders. Enjoy beach quad biking and high-speed boat wave blasting.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-road"></i> Marine Drive</span>
+                    <span><i class="fas fa-bolt"></i> Beach Quad Bike</span>
+                    <span><i class="fas fa-gem"></i> Inani Corals</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itinerary-step">
+                <div class="step-marker">Days 3-4</div>
+                <div class="step-content">
+                  <h4>Cruise to Saint Martin's Coral Island & Chera Dwip</h4>
+                  <p>Board the luxury sea cruise to Bangladesh's only coral island (Narikel Jinjira). Cycle along sandy trails lined with coconut palms, snorkel among live coral reefs, and take a local boat out to uninhabited Chera Dwip.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-ship"></i> Sea Cruise</span>
+                    <span><i class="fas fa-swimmer"></i> Coral Snorkeling</span>
+                    <span><i class="fas fa-tree"></i> Coconut Palms</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="itinerary-step">
+                <div class="step-marker">Day 5</div>
+                <div class="step-content">
+                  <h4>Rakhine Cultural Trails & Farewell Sunset</h4>
+                  <p>Return to Cox's Bazar to explore Rakhine Buddhist monasteries, authentic handloom weaving factories, Burmese pearl markets, and a breathtaking farewell twilight beach stroll.</p>
+                  <div class="step-tags">
+                    <span><i class="fas fa-landmark"></i> Rakhine Heritage</span>
+                    <span><i class="fas fa-gift"></i> Handloom Pearls</span>
+                    <span><i class="fas fa-sun"></i> Farewell Sunset</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Stays & Resorts Showcase
+         ========================================================================== -->
+    <section id="stays" class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-hotel"></i> Hospitality</span>
+          <h2 class="section-title">Beachfront <span>Hospitality & Retreats</span></h2>
+          <p class="section-desc">Experience world-class architectural designs, ocean-facing balconies, and warm Bangladeshi coastal hospitality.</p>
+        </div>
+
+        <div class="resort-grid">
+          <!-- Resort 1 -->
+          <article class="resort-card">
+            <div class="resort-img-box">
+              <img src="assets/images/luxury_resort.jpg" alt="Mermaid Beach Eco Resort" loading="lazy">
+              <span class="resort-rating"><i class="fas fa-star"></i> 4.9</span>
+            </div>
+            <div class="resort-info">
+              <div class="resort-type">Eco Coastal Retreat</div>
+              <h3 class="resort-title">Sayeman & Mermaid Ocean Retreat</h3>
+              <div class="resort-loc"><i class="fas fa-map-marker-alt"></i> Marine Drive & Kolatoli Point</div>
+              <div class="resort-amenities">
+                <span><i class="fas fa-swimming-pool"></i> Infinity Pool</span>
+                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                <span><i class="fas fa-utensils"></i> Ocean Cafe</span>
+              </div>
+              <div class="resort-price-row">
+                <div class="resort-feature-highlight">
+                  <small style="color: var(--text-muted); display: block;">Signature Architecture</small>
+                  <strong style="color: #38bdf8; font-size: 0.95rem;">Oceanfront Infinity Pool & Sun Terrace</strong>
+                </div>
+                <span class="card-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">Beachfront</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Resort 2 -->
+          <article class="resort-card">
+            <div class="resort-img-box">
+              <img src="assets/images/hero.jpg" alt="Long Beach Ocean Suites" loading="lazy">
+              <span class="resort-rating"><i class="fas fa-star"></i> 4.8</span>
+            </div>
+            <div class="resort-info">
+              <div class="resort-type">Premier Coastal Suites</div>
+              <h3 class="resort-title">Ocean Paradise & Long Beach Hotel</h3>
+              <div class="resort-loc"><i class="fas fa-map-marker-alt"></i> Kolatoli Main Avenue</div>
+              <div class="resort-amenities">
+                <span><i class="fas fa-spa"></i> Wellness Spa</span>
+                <span><i class="fas fa-cocktail"></i> Rooftop BBQ</span>
+                <span><i class="fas fa-dumbbell"></i> Fitness</span>
+              </div>
+              <div class="resort-price-row">
+                <div class="resort-feature-highlight">
+                  <small style="color: var(--text-muted); display: block;">Scenic Viewpoint</small>
+                  <strong style="color: #38bdf8; font-size: 0.95rem;">Panoramic Bay of Bengal Rooftop Lounge</strong>
+                </div>
+                <span class="card-tag" style="background: rgba(249, 115, 22, 0.15); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.3);">City & Sea</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Resort 3 -->
+          <article class="resort-card">
+            <div class="resort-img-box">
+              <img src="assets/images/inani_beach.jpg" alt="Inani Royal Beach Villas" loading="lazy">
+              <span class="resort-rating"><i class="fas fa-star"></i> 4.7</span>
+            </div>
+            <div class="resort-info">
+              <div class="resort-type">Coral Shoreline Bungalows</div>
+              <h3 class="resort-title">Inani Coral Beachfront Bungalows</h3>
+              <div class="resort-loc"><i class="fas fa-map-marker-alt"></i> Inani Coral Shoreline</div>
+              <div class="resort-amenities">
+                <span><i class="fas fa-umbrella-beach"></i> Private Coast</span>
+                <span><i class="fas fa-moon"></i> Stargazing</span>
+                <span><i class="fas fa-tree"></i> Coconut Palms</span>
+              </div>
+              <div class="resort-price-row">
+                <div class="resort-feature-highlight">
+                  <small style="color: var(--text-muted); display: block;">Nature Immersion</small>
+                  <strong style="color: #38bdf8; font-size: 0.95rem;">Peaceful Coral Shore & Private Sunrises</strong>
+                </div>
+                <span class="card-tag" style="background: rgba(45, 212, 191, 0.15); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">Coral Shore</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         How to Reach & Safety Hub
+         ========================================================================== -->
+    <section id="guide" class="section" style="background: rgba(10, 20, 35, 0.4);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-compass"></i> Essential Travel Guide</span>
+          <h2 class="section-title">How to Reach & <span>Beach Safety</span></h2>
+          <p class="section-desc">Smooth connectivity and 24/7 tourist safety information for your peaceful trip.</p>
+        </div>
+
+        <div class="travel-guide-grid">
+          <!-- Transport Modes -->
+          <div class="transport-card">
+            <h3><i class="fas fa-route" style="color: var(--primary);"></i> Getting to Cox's Bazar</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">Multiple convenient travel options from Dhaka, Chittagong, and Sylhet:</p>
+
+            <div class="transport-modes">
+              <div class="mode-item">
+                <div class="mode-icon"><i class="fas fa-train"></i></div>
+                <div class="mode-details">
+                  <h4>New Iconic Oyster Railway Station</h4>
+                  <p>Travel by direct fast express train (Cox's Bazar Express / Parjotok Express) from Dhaka in just 8 hours.</p>
+                  <span class="mode-tag"><i class="fas fa-check"></i> Most Scenic & Comfortable</span>
+                </div>
+              </div>
+
+              <div class="mode-item">
+                <div class="mode-icon"><i class="fas fa-plane"></i></div>
+                <div class="mode-details">
+                  <h4>Direct Flights (CXB Airport)</h4>
+                  <p>55-minute direct flights from Hazrat Shahjalal International Airport (DAC) via Biman, US-Bangla, and Air Astra.</p>
+                  <span class="mode-tag"><i class="fas fa-bolt"></i> Fastest Option</span>
+                </div>
+              </div>
+
+              <div class="mode-item">
+                <div class="mode-icon"><i class="fas fa-bus"></i></div>
+                <div class="mode-details">
+                  <h4>Luxury Sleeper Coaches</h4>
+                  <p>Overnight AC buses (Green Line, Hanif, Saintmartin Hyundai) with reclining seats and USB chargers.</p>
+                  <span class="mode-tag"><i class="fas fa-bed"></i> Budget Friendly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety Card -->
+          <div class="safety-card">
+            <h3><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Tourist Safety & Lifeguard Hub</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">Cox's Bazar is fully patrolled by specialized Tourist Police and Sea Lifeguards:</p>
+
+            <div class="safety-contacts">
+              <div class="safety-contact-box">
+                <div>
+                  <h5>Tourist Police Hotline</h5>
+                  <small>24/7 dedicated traveler assistance</small>
+                </div>
+                <span class="hotline-num">+880 1320-163599</span>
+              </div>
+
+              <div class="safety-contact-box">
+                <div>
+                  <h5>National Emergency</h5>
+                  <small>Police, Ambulance, Fire</small>
+                </div>
+                <span class="hotline-num">999</span>
+              </div>
+
+              <div class="safety-contact-box">
+                <div>
+                  <h5>Sea Lifeguard Station</h5>
+                  <small>Laboni & Sugandha Watchtowers</small>
+                </div>
+                <span class="hotline-num">VHF Channel 16</span>
+              </div>
+            </div>
+
+            <div class="flag-rules">
+              <h4 style="font-size: 0.95rem; margin-bottom: 10px;">🚩 Beach Swimming Flags:</h4>
+              <div class="flag-item">
+                <div class="flag-dot green"></div>
+                <span><strong>Green Flag:</strong> Safe for swimming & water sports (Low tide zones).</span>
+              </div>
+              <div class="flag-item">
+                <div class="flag-dot red"></div>
+                <span><strong>Red Flag:</strong> High tide or strong undertow — strictly stay near shore.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Photo Gallery (Lightbox)
+         ========================================================================== -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-images"></i> Visual Moments</span>
+          <h2 class="section-title">Cox's Bazar in <span>Pictures</span></h2>
+          <p class="section-desc">Click any photo to view in high resolution.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-caption="Golden Sunset & Moon Boat (Sampan) on Cox's Bazar Shore">
+            <img src="assets/images/hero.jpg" alt="Cox's Bazar Sunset" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Traditional Moon Boat (Sampan) floating on clear emerald Bay of Bengal waters">
+            <img src="assets/images/slider_sampan_calm.jpg" alt="Calm Moon Boat" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Bangladesh National Flag proudly held amidst the waves of Cox's Bazar">
+            <img src="assets/images/slider_bd_flag.jpg" alt="Bangladesh Flag in Waves" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Local fisherman boat riding the strong coastal waves of Cox's Bazar">
+            <img src="assets/images/slider_fishing_boat.jpg" alt="Fishing Boat in Surf" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Evening twilight walk on wet golden sands with tranquil sea reflections">
+            <img src="assets/images/slider_beach_walk.jpg" alt="Evening Beach Walk" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Winding Marine Drive Highway between green hills and roaring ocean">
+            <img src="assets/images/marine_drive.jpg" alt="Marine Drive" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Ancient green-mossy coral rocks at pristine Inani Beach">
+            <img src="assets/images/inani_beach.jpg" alt="Inani Beach" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Saint Martin's Island turquoise coral reefs and coconut groves">
+            <img src="assets/images/saint_martins.jpg" alt="Saint Martin Island" loading="lazy">
+            <div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Fullscreen Modal -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="lightboxClose" class="lightbox-close">&times;</button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Full Preview">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-text">Cox's Bazar</div>
+          </div>
+          <p>
+            The official tourism portal dedicated to showcasing the pristine beauty, culture, and hospitality of Cox's Bazar, Bangladesh.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Top Beaches</h4>
+          <ul class="footer-links">
+            <li><a href="#destinations">Inani Beach</a></li>
+            <li><a href="#destinations">Laboni Beach</a></li>
+            <li><a href="#destinations">Sugandha Point</a></li>
+            <li><a href="#destinations">Himchari Waterfall</a></li>
+            <li><a href="#destinations">Saint Martin's Island</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Highlights</h4>
+          <ul class="footer-links">
+            <li><a href="#activities">Marine Drive Safari</a></li>
+            <li><a href="#activities">Parasailing Flight</a></li>
+            <li><a href="#activities">Surfing Lessons</a></li>
+            <li><a href="#cuisine">Seafood Feasts</a></li>
+            <li><a href="#itineraries">Suggested Itineraries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Emergency Contacts</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+8801320163599">📞 Tourist Police: 01320-163599</a></li>
+            <li><a href="tel:999">🚨 Emergency: 999</a></li>
+            <li><a href="mailto:info@visitcoxsbazar.bd">✉️ info@visitcoxsbazar.bd</a></li>
+            <li><span style="color: #64748b; font-size: 0.82rem;">Cox's Bazar, Chittagong, Bangladesh</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Cox's Bazar Tourism Promotion. Designed by Shafayat for Bangladesh Tourism.</div>
+        <div>World's Longest Natural Sand Beach (120 km)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
