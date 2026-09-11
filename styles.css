@@ -52,6 +52,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-family: var(--font-body);
   background-color: var(--bg-dark);
   color: var(--text-main);
@@ -716,6 +717,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 10px;
   border-radius: var(--radius-sm);
   color: #cbd5e1;
+  white-space: nowrap;
 }
 
 .card-footer {
@@ -1036,7 +1038,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .step-marker {
-  width: 76px;
+  min-width: 85px;
+  width: auto;
+  white-space: nowrap;
   padding: 8px 10px;
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(249, 115, 22, 0.25) 100%);
@@ -1751,3 +1755,64 @@ h1, h2, h3, h4, h5, h6 {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
+/* Google Translate Widget Customization */
+.translate-widget {
+  margin-right: 5px;
+}
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 10px 14px !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+.goog-te-gadget-simple span {
+  color: var(--text-main) !important;
+}
+.goog-te-gadget-icon {
+  display: none !important;
+}
+/* Hide the top Google translate banner */
+body {
+  top: 0 !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-normal);
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.6);
+}

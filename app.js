@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initItineraryTabs();
   initLightbox();
   initMap();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -427,4 +428,25 @@ function initMap() {
   });
 }
 
+/* ==========================================================================
+   9. Back to Top Button
+   ========================================================================== */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (!backToTopBtn) return;
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
