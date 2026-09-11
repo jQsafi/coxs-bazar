@@ -73,6 +73,9 @@
       </ul>
 
       <div class="nav-actions">
+        <!-- Google Translate Widget -->
+        <div id="google_translate_element" class="translate-widget"></div>
+
         <!-- Ambient Beach Sound Toggle -->
         <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle ambient ocean waves">
           <span>🌊</span> <span id="soundStatusText">Beach Vibe</span>
@@ -1095,6 +1098,13 @@
 
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,bn,hi,zh-CN,ja,ar', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- Main JavaScript -->
   <script src="app.js"></script>
