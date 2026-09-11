@@ -22,6 +22,8 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -39,11 +41,10 @@
       <ul class="nav-links">
         <li><a href="#destinations" class="nav-link">Destinations</a></li>
         <li><a href="#activities" class="nav-link">Adventures</a></li>
-        <li><a href="#cuisine" class="nav-link">Seafood & Dining</a></li>
-        <li><a href="#itineraries" class="nav-link">Itineraries</a></li>
+        <li><a href="#cuisine" class="nav-link">Dining</a></li>
         <li><a href="#stays" class="nav-link">Resorts</a></li>
-        <li><a href="#guide" class="nav-link">Travel & Safety</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#guide" class="nav-link">Guide</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -64,12 +65,15 @@
     <div class="logo-text" style="font-size: 1.5rem; margin-bottom: 10px;">Cox's Bazar</div>
     <ul class="mobile-nav-links">
       <li><a href="#destinations">🏖️ Destinations</a></li>
+      <li><a href="#map-section">🗺️ Interactive Map</a></li>
       <li><a href="#activities">🏄 Adventures & Marine Drive</a></li>
+      <li><a href="#culture">🎉 Local Culture & Festivals</a></li>
       <li><a href="#cuisine">🍤 Seafood & Food Guide</a></li>
       <li><a href="#itineraries">🗓️ Suggested Itineraries</a></li>
       <li><a href="#stays">🏨 Luxury Resorts & Stays</a></li>
+      <li><a href="#reviews">⭐ Tourist Reviews</a></li>
+      <li><a href="#eco-tourism">🐢 Eco-Tourism Guide</a></li>
       <li><a href="#guide">🚆 How to Reach & Safety</a></li>
-      <li><a href="#gallery">📸 Photo Gallery</a></li>
     </ul>
     <a href="#destinations" class="btn btn-primary" style="width: 100%; margin-top: 20px; text-decoration: none;">Explore Cox's Bazar</a>
   </div>
@@ -181,10 +185,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         About & History Section
-         ========================================================================== -->
-    <section id="history" class="section" style="background: linear-gradient(to right, rgba(15,23,42,0.95), rgba(15,23,42,0.85)), url('assets/images/slider_beach_walk.jpg') center/cover fixed; position: relative;">
+    <section id="history" class="section" style="background: linear-gradient(to right, rgba(15,23,42,0.7), rgba(15,23,42,0.5)), url('assets/images/slider_beach_walk.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="history-content-wrapper" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 40px; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
           <span class="section-badge" style="margin: 0 auto 20px;"><i class="fas fa-book-open"></i> The Legacy</span>
@@ -202,7 +203,7 @@
     <!-- ==========================================================================
          Destinations Section
          ========================================================================== -->
-    <section id="destinations" class="section">
+    <section id="destinations" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/inani_beach.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-map-marked-alt"></i> Iconic Coastlines</span>
@@ -356,9 +357,23 @@
     </section>
 
     <!-- ==========================================================================
+         Interactive Tourist Map
+         ========================================================================== -->
+    <section id="map-section" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.95), rgba(5,13,24,0.85)), url('assets/images/slider_beach_walk.jpg') center/cover fixed; position: relative;">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-map"></i> Explore visually</span>
+          <h2 class="section-title">Interactive <span>Tourist Map</span></h2>
+          <p class="section-desc">Find your way around the 120km coastline, discover beaches, and plan your route.</p>
+        </div>
+        <div id="map-container" class="map-container"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          Thrills & Activities Section
          ========================================================================== -->
-    <section id="activities" class="section" style="background: rgba(10, 20, 35, 0.4);">
+    <section id="activities" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/parasailing.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-bolt"></i> Action & Adrenaline</span>
@@ -433,9 +448,39 @@
     </section>
 
     <!-- ==========================================================================
+         Local Culture, Crafts & Festivals
+         ========================================================================== -->
+    <section id="culture" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/slider_sampan_calm.jpg') center/cover fixed; position: relative;">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-masks-theater"></i> Rich Heritage</span>
+          <h2 class="section-title">Local <span>Culture & Festivals</span></h2>
+          <p class="section-desc">Experience the vibrant traditions of the indigenous Rakhine community, local crafts, and year-round festivities.</p>
+        </div>
+        <div class="culture-grid">
+          <div class="culture-card">
+            <div class="culture-icon">🪘</div>
+            <h3>Rakhine New Year (Sangrai)</h3>
+            <p>Celebrate the traditional water festival with the local Rakhine community in mid-April. A time of joy, traditional dances, and water throwing to wash away the past year's sorrows.</p>
+          </div>
+          <div class="culture-card">
+            <div class="culture-icon">🧶</div>
+            <h3>Rakhine Handloom Weaving</h3>
+            <p>Visit local weaving villages where artisans create intricate, colorful textiles and shawls using traditional wooden looms.</p>
+          </div>
+          <div class="culture-card">
+            <div class="culture-icon">📿</div>
+            <h3>Burmese Market Crafts</h3>
+            <p>A bustling market offering handmade shell crafts, pearls, sandalwood, traditional Burmese clothes, and famous tamarind candies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          Seafood & Culinary Guide
          ========================================================================== -->
-    <section id="cuisine" class="section">
+    <section id="cuisine" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/seafood_feast.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-utensils"></i> Coastal Gourmet</span>
@@ -495,7 +540,7 @@
     <!-- ==========================================================================
          Curated Travel Itineraries & Experience Guide
          ========================================================================== -->
-    <section id="itineraries" class="section" style="background: radial-gradient(circle at 50% 50%, #0d1f38 0%, #050d18 100%);">
+    <section id="itineraries" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/marine_drive.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-map-signs"></i> Curated Journeys</span>
@@ -643,7 +688,7 @@
     <!-- ==========================================================================
          Stays & Resorts Showcase
          ========================================================================== -->
-    <section id="stays" class="section">
+    <section id="stays" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/luxury_resort.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-hotel"></i> Hospitality</span>
@@ -731,9 +776,84 @@
     </section>
 
     <!-- ==========================================================================
+         Tourist Reviews & Social Proof
+         ========================================================================== -->
+    <section id="reviews" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/hero.jpg') center/cover fixed; position: relative;">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-star"></i> Traveler Stories</span>
+          <h2 class="section-title">What <span>Tourists Say</span></h2>
+          <p class="section-desc">Read experiences from travelers who explored the world's longest sea beach.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar">S</div>
+              <div class="reviewer-info">
+                <h4>Sarah Jenkins</h4>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              </div>
+            </div>
+            <p class="review-text">"The Marine Drive was absolute magic! The juxtaposition of green hills on one side and the vast ocean on the other is breathtaking. A must-visit!"</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar">M</div>
+              <div class="reviewer-info">
+                <h4>Mohammed Ali</h4>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              </div>
+            </div>
+            <p class="review-text">"Loved the fresh seafood at the beachside stalls in Sugandha. The fried Rupchanda fish with local spices was incredible. Sunset views were spectacular."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar">E</div>
+              <div class="reviewer-info">
+                <h4>Elena Rossi</h4>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              </div>
+            </div>
+            <p class="review-text">"Inani Beach was so peaceful compared to the main town. The coral stones covered in green moss during low tide made for amazing photography."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Eco-Tourism & Sustainability Guide
+         ========================================================================== -->
+    <section id="eco-tourism" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/saint_martins.jpg') center/cover fixed; position: relative;">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge eco-badge"><i class="fas fa-leaf"></i> Travel Responsibly</span>
+          <h2 class="section-title">Protect Our <span>Coastal Ecosystem</span></h2>
+          <p class="section-desc">Help us preserve the natural beauty and biodiversity of Cox's Bazar for future generations.</p>
+        </div>
+        <div class="eco-grid">
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fas fa-trash-alt"></i></div>
+            <h4>Leave No Trace</h4>
+            <p>Keep the 120km beach pristine. Always dispose of plastics and wrappers in designated bins, or take your trash back with you.</p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fas fa-water"></i></div>
+            <h4>Protect the Corals</h4>
+            <p>When visiting Saint Martin's Island or Inani, do not step on, break, or collect coral stones. They are living ecosystems.</p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fas fa-paw"></i></div>
+            <h4>Respect Wildlife</h4>
+            <p>Maintain distance from red crabs on Sonadia Island and do not disturb sea turtle nesting sites along the southern coast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          How to Reach & Safety Hub
          ========================================================================== -->
-    <section id="guide" class="section" style="background: rgba(10, 20, 35, 0.4);">
+    <section id="guide" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/railway_station.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-compass"></i> Essential Travel Guide</span>
@@ -827,7 +947,7 @@
     <!-- ==========================================================================
          Photo Gallery (Lightbox)
          ========================================================================== -->
-    <section id="gallery" class="section">
+    <section id="gallery" class="section" style="background: linear-gradient(to bottom, rgba(5,13,24,0.9), rgba(5,13,24,0.75)), url('assets/images/slider_fishing_boat.jpg') center/cover fixed; position: relative;">
       <div class="container">
         <div class="text-center">
           <span class="section-badge"><i class="fas fa-images"></i> Visual Moments</span>
@@ -892,7 +1012,7 @@
   <!-- ==========================================================================
        Footer
        ========================================================================== -->
-  <footer class="footer">
+  <footer class="footer" style="background: linear-gradient(to bottom, rgba(5,13,24,0.95), rgba(5,13,24,0.9)), url('assets/images/favicon_hero.jpg') center/cover fixed; position: relative;">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -944,6 +1064,8 @@
     </div>
   </footer>
 
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Main JavaScript -->
   <script src="app.js"></script>
 </body>

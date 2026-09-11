@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilterTabs();
   initItineraryTabs();
   initLightbox();
+  initMap();
 });
 
 /* ==========================================================================
@@ -380,5 +381,48 @@ function initLightbox() {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       modal.classList.remove('active');
     }
+  });
+}
+
+/* ==========================================================================
+   7. Interactive Tourist Map (Leaflet.js)
+   ========================================================================== */
+function initMap() {
+  const mapContainer = document.getElementById('map-container');
+  if (!mapContainer || typeof L === 'undefined') return;
+
+  // Initialize map centered around Cox's Bazar main beach area
+  // Coordinates: 21.4272° N, 91.9722° E (approx)
+  const map = L.map('map-container').setView([21.4272, 91.9722], 12);
+
+  // Use standard OpenStreetMap tiles (100% free, no API key required)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Custom icon for pins
+  const customIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  // Markers Data
+  const locations = [
+    { name: "Laboni Beach", coords: [21.4172, 91.9722], desc: "Main beach center, popular for sunsets and nightlife." },
+    { name: "Sugandha Point", coords: [21.4200, 91.9750], desc: "Famous for beachfront seafood stalls and Burmese markets." },
+    { name: "Inani Beach", coords: [21.1883, 92.0436], desc: "Coral boulder beach, peaceful and perfect for photography." },
+    { name: "Himchari National Park", coords: [21.3533, 91.9961], desc: "Scenic hill viewpoint and natural waterfalls." }
+  ];
+
+  // Add markers to the map
+  locations.forEach(loc => {
+    L.marker(loc.coords, { icon: customIcon })
+      .addTo(map)
+      .bindPopup(`<strong>${loc.name}</strong><br>${loc.desc}`);
   });
 }
