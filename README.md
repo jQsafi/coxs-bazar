@@ -11,15 +11,16 @@ The website is live and hosted via GitHub Pages. You can visit it here:
 
 ## 🚀 What's New (v2.0 Release)
 
+- **Cinematic Video Background**: Integrated a stunning slow-motion drone footage background in the hero section with an instant-load fallback poster.
+- **Global Accessibility**: Integrated Google Translate with a custom, sleek dark-mode UI specifically highlighting the top 6 tourist languages (Bengali, English, Hindi, Chinese, Japanese, Arabic).
+- **Expanded Hospitality Section**: Added iconic resorts like Royal Tulip Sea Pearl and Seagull Hotel, complete with stunning, highly detailed AI-generated photorealistic images.
+- **Enhanced UI/UX**: Added a smooth-scrolling "Back to Top" floating action button, fixed navbar anchor offsets, and perfected CSS text-wrapping across all device sizes.
 - **Interactive Tourist Map**: Integrated Leaflet.js with OpenStreetMap for a custom dark-mode interactive map featuring key spots like Laboni Beach, Inani, and Himchari.
 - **Rich Local Culture & Heritage**: Added a new section highlighting local festivals, handloom weaving, and the Burmese Market.
-- **Eco-Tourism & Sustainability Guide**: Promotes responsible travel with guidelines on protecting coral reefs and sea turtle nesting sites.
-- **Traveler Stories**: Beautifully designed social proof section with tourist reviews to help plan perfect trips.
-- **Premium UI/UX Overhaul**: Upgraded the layout with parallax scrolling backgrounds, 3D depth shadows between sections, and stunning glassmorphism effects.
 
 ## ✨ Core Features
 
-- **Immersive Hero Section**: A stunning multi-photo background slider with crossfade transitions and interactive dot/arrow navigation.
+- **Immersive Hero Section**: A stunning cinematic video background with crossfade transitions and interactive dot/arrow navigation.
 - **The Legacy**: A rich historical section detailing the naming of Cox's Bazar after Captain Hiram Cox and its global fame.
 - **Beach Status Ticker**: A live (simulated) update bar showing local time, sunset countdown, tide status, and beach safety flags.
 - **Curated Travel Itineraries**: Interactive tabs to explore various trip plans (Weekend Getaways, Adventure Trips, Family Vacations).
