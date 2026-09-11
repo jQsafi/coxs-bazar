@@ -426,3 +426,5 @@ function initMap() {
       .bindPopup(`<strong>${loc.name}</strong><br>${loc.desc}`);
   });
 }
+
+
