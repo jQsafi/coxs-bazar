@@ -9,7 +9,15 @@ Welcome to the **Cox's Bazar Tourist Portal** — an interactive, single-page ap
 The website is live and hosted via GitHub Pages. You can visit it here:
 **[https://jqsafi.github.io/coxs-bazar/](https://jqsafi.github.io/coxs-bazar/)**
 
-## ✨ Features
+## 🚀 What's New (v2.0 Release)
+
+- **Interactive Tourist Map**: Integrated Leaflet.js with OpenStreetMap for a custom dark-mode interactive map featuring key spots like Laboni Beach, Inani, and Himchari.
+- **Rich Local Culture & Heritage**: Added a new section highlighting local festivals, handloom weaving, and the Burmese Market.
+- **Eco-Tourism & Sustainability Guide**: Promotes responsible travel with guidelines on protecting coral reefs and sea turtle nesting sites.
+- **Traveler Stories**: Beautifully designed social proof section with tourist reviews to help plan perfect trips.
+- **Premium UI/UX Overhaul**: Upgraded the layout with parallax scrolling backgrounds, 3D depth shadows between sections, and stunning glassmorphism effects.
+
+## ✨ Core Features
 
 - **Immersive Hero Section**: A stunning multi-photo background slider with crossfade transitions and interactive dot/arrow navigation.
 - **The Legacy**: A rich historical section detailing the naming of Cox's Bazar after Captain Hiram Cox and its global fame.
